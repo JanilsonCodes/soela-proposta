@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191715">
+  <meta name="description" content="Proposta comercial da WebSolutions para a aplicação mobile SÓ ELA.">
+  <title>Proposta SÓ ELA | WebSolutions</title>
+
+  <style>
+    :root {
+      --ink: #191715;
+      --paper: #f5f2ec;
+      --wine: #702638;
+      --muted: #77716a;
+      --line: #ded7ce;
+      --white: #fffdfa;
+      --soft: #eee7df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--wine);
+    }
+
+    .tag {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 90px 0;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .eyebrow {
+      color: var(--wine);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1;
+      margin: 20px 0;
+    }
+
+    h1 em {
+      color: var(--wine);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 520px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border: 1px solid var(--ink);
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      min-height: 390px;
+      background: #e8ded5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image::after {
+      content: "SÓ ELA";
+      position: absolute;
+      bottom: 15px;
+      font-family: Georgia, serif;
+      font-size: 75px;
+      color: #19171515;
+    }
+
+    .phone {
+      width: 190px;
+      height: 340px;
+      background: #191715;
+      border: 7px solid #292522;
+      border-radius: 30px;
+      padding: 10px;
+      transform: rotate(-7deg);
+      box-shadow: 0 25px 50px #0003;
+      z-index: 1;
+    }
+
+    .phone-screen {
+      height: 100%;
+      border-radius: 20px;
+      background: #f8f4ef;
+      padding: 15px 10px;
+      text-align: center;
+    }
+
+    .phone-logo {
+      font-size: 10px;
+      letter-spacing: 4px;
+      margin-bottom: 25px;
+    }
+
+    .phone-screen h2 {
+      font-family: Georgia, serif;
+      font-size: 27px;
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .phone-screen p {
+      font-size: 8px;
+      margin: 10px 0 15px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    .product {
+      height: 105px;
+      background: #dfcec2;
+    }
+
+    .product:nth-child(2) {
+      background: #c8b2a7;
+    }
+
+    .product:nth-child(3) {
+      background: #d2c3b8;
+    }
+
+    .product:nth-child(4) {
+      background: #e6d9cf;
+    }
+
+    section {
+      padding: 75px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: clamp(35px, 5vw, 48px);
+      line-height: 1.1;
+      margin: 12px 0;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .feature {
+      padding: 25px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .feature-number {
+      color: var(--wine);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      margin: 17px 0 8px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .prototype {
+      background: var(--ink);
+      color: white;
+      padding: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .prototype p {
+      color: #c8c0b8;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .prototype .btn {
+      color: white;
+      border-color: white;
+      white-space: nowrap;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .price-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 28px;
+    }
+
+    .price-card h3 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .price {
+      font-size: 35px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .price small {
+      font-size: 12px;
+      font-weight: normal;
+      color: var(--muted);
+    }
+
+    .price-card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .price-card li {
+      margin: 9px 0;
+    }
+
+    .selector {
+      margin-top: 25px;
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .option small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 27px;
+      flex-shrink: 0;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      inset: 0;
+      background: #c9c2ba;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .slider::before {
+      content: "";
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      left: 4px;
+      top: 4px;
+      background: white;
+      border-radius: 50%;
+      transition: .3s;
+    }
+
+    .switch input:checked + .slider {
+      background: var(--wine);
+    }
+
+    .switch input:checked + .slider::before {
+      transform: translateX(23px);
+    }
+
+    .total {
+      background: var(--soft);
+      padding: 25px;
+      margin-top: 20px;
+    }
+
+    .total-label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .total-price {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .monthly {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 15px;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .monthly strong {
+      font-size: 21px;
+    }
+
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    .maintenance {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .maintenance ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .maintenance li {
+      margin: 10px 0;
+    }
+
+    .fee {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 22px;
+      margin-bottom: 12px;
+    }
+
+    .fee strong {
+      font-size: 20px;
+    }
+
+    .fee p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      border-top: 2px solid var(--wine);
+      padding-top: 18px;
+    }
+
+    .step span {
+      font-family: Georgia, serif;
+      font-size: 30px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    footer {
+      background: var(--ink);
+      color: white;
+      padding: 40px 0;
+    }
+
+    footer p {
+      color: #bcb3aa;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media(max-width: 750px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 0;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pricing,
+      .maintenance {
+        grid-template-columns: 1fr;
+      }
+
+      .prototype {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar .tag {
+        display: none;
+      }
+
+      .monthly {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+
+      .selector {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">WEB<span>SOLUTIONS</span></div>
+    <div class="tag">Proposta comercial · 2026</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="container hero">
+
+    <div>
+      <div class="eyebrow">Proposta de desenvolvimento</div>
+
+      <h1>
+        A SÓ ELA,<br>
+        <em>mais perto</em><br>
+        das clientes.
+      </h1>
+
+      <p>
+        Uma aplicação mobile para apresentar os produtos,
+        aproximar a marca das suas clientes e tornar as
+        encomendas mais simples e organizadas.
+      </p>
+
+      <div class="buttons">
+        <a href="#investimento" class="btn primary">
+          Ver investimento
+        </a>
+
+        <a href="https://soela.vercel.app/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+          Explorar protótipo ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-logo">SÓ ELA</div>
+          <h2>New<br>Collection</h2>
+          <p>PEÇAS ESCOLHIDAS PARA SI</p>
+
+          <div class="products">
+            <div class="product"></div>
+            <div class="product"></div>
+            <div class="product"></div>
+            <div class="product"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FUNCIONALIDADES -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">A solução</div>
+
+      <h2 class="section-title">
+        Uma experiência de compra simples e elegante.
+      </h2>
+
+      <p class="section-description">
+        A aplicação será desenvolvida para facilitar a consulta
+        dos produtos e a gestão das encomendas, mantendo
+        a identidade da SÓ ELA.
+      </p>
+
+      <div class="features">
+
+        <article class="feature">
+          <span class="feature-number">01</span>
+          <h3>Catálogo de produtos</h3>
+          <p>Produtos com fotografias, preços, descrições e categorias.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-number">02</span>
+          <h3>Perfis de clientes</h3>
+          <p>Perfis individuais para uma experiência mais organizada.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-number">03</span>
+          <h3>Carrinho e encomendas</h3>
+          <p>Seleção de artigos, envio de pedidos e consulta do histórico.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-number">04</span>
+          <h3>Notificações</h3>
+          <p>Comunicação de novidades e atualizações relevantes.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-number">05</span>
+          <h3>Painel administrativo</h3>
+          <p>Gestão de produtos, clientes e encomendas num só lugar.</p>
+        </article>
+
+        <article class="feature">
+          <span class="feature-number">06</span>
+          <h3>Disponibilidade e stock</h3>
+          <p>Atualização da disponibilidade dos produtos.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOTIPO -->
+  <section>
+    <div class="container">
+
+      <div class="prototype">
+        <div>
+          <div class="eyebrow" style="color:#d7aab4">
+            Demonstração
+          </div>
+
+          <h2 style="font-family:Georgia,serif;font-weight:normal;margin-top:8px">
+            Veja o protótipo da SÓ ELA
+          </h2>
+
+          <p>
+            Consulte a demonstração criada como referência
+            visual para o projeto.
+          </p>
+        </div>
+
+        <a href="https://soela.vercel.app/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+          Abrir protótipo ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section id="investimento">
+    <div class="container">
+
+      <div class="eyebrow">Investimento</div>
+
+      <h2 class="section-title">
+        Uma aplicação, duas plataformas.
+      </h2>
+
+      <p class="section-description">
+        O desenvolvimento da aplicação tem um investimento
+        único de 34.000 CVE. A cliente pode escolher
+        disponibilizá-la em Android ou também em iPhone.
+      </p>
+
+      <div class="price-card">
+
+        <div class="eyebrow">Investimento único</div>
+
+        <h3>Desenvolvimento da aplicação</h3>
+
+        <div class="price">
+          34.000
+          <small>CVE · pagamento único</small>
+        </div>
+
+        <ul>
+          <li>Desenvolvimento da aplicação mobile</li>
+          <li>Integração com a base de dados</li>
+          <li>Painel administrativo</li>
+          <li>Preparação para publicação nas lojas</li>
+          <li>Opção de disponibilização em Android e iPhone</li>
+        </ul>
+
+      </div>
+
+      <!-- SELETOR DE PLATAFORMAS -->
+      <div class="selector">
+
+        <h3>Escolha as plataformas</h3>
+
+        <p class="note">
+          A versão Android está incluída na mensalidade base.
+          A versão iPhone pode ser adicionada quando desejar.
+        </p>
+
+        <div class="option">
+
+          <div>
+            <strong>Android</strong>
+            <small>Google Play Store</small>
+          </div>
+
+          <strong>Incluído</strong>
+
+        </div>
+
+        <div class="option">
+
+          <div>
+            <strong>Adicionar iPhone (iOS)</strong>
+
+            <small>
+              Adicional de 1.500 CVE na mensalidade.
+            </small>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="ios">
+            <span class="slider"></span>
+          </label>
+
+        </div>
+
+        <div class="total">
+
+          <div class="total-label">
+            Investimento inicial
+          </div>
+
+          <div class="total-price">
+            34.000 CVE
+          </div>
+
+          <div class="monthly">
+
+            <div>
+              <div class="total-label">
+                Mensalidade de manutenção e infraestrutura
+              </div>
+
+              <strong id="monthly">
+                2.500 CVE/mês
+              </strong>
+            </div>
+
+            <span id="platforms" class="total-label">
+              Android
+            </span>
+
+          </div>
+
+        </div>
+
+        <p class="note">
+          O investimento inicial permanece sempre em 34.000 CVE.
+          A escolha do iPhone altera apenas a mensalidade.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MANUTENÇÃO -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">Serviço mensal</div>
+
+      <h2 class="section-title">
+        Manter a aplicação a funcionar.
+      </h2>
+
+      <p class="section-description">
+        A mensalidade assegura a infraestrutura e o
+        acompanhamento técnico contínuo do serviço.
+      </p>
+
+      <div class="maintenance">
+
+        <div>
+          <h3>O que está incluído</h3>
+
+          <ul>
+            <li>Alojamento e infraestrutura da aplicação</li>
+            <li>Base de dados e respetiva gestão</li>
+            <li>Armazenamento de imagens e ficheiros dentro dos limites do serviço</li>
+            <li>Manutenção técnica e correção de erros</li>
+            <li>Atualizações técnicas e suporte</li>
+            <li>Monitorização do funcionamento</li>
+          </ul>
+        </div>
+
+        <div>
+
+          <h3>Valores mensais</h3>
+
+          <div class="fee">
+            <strong>2.500 CVE/mês</strong>
+            <p>Aplicação Android.</p>
+          </div>
+
+          <div class="fee">
+            <strong>4.000 CVE/mês</strong>
+            <p>
+              Android + iPhone. Inclui o adicional de
+              1.500 CVE pela disponibilização e manutenção
+              da versão iOS.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TAXAS EXTERNAS -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">Taxas externas</div>
+
+      <h2 class="section-title">
+        Contas das lojas de aplicações.
+      </h2>
+
+      <p class="section-description">
+        As taxas abaixo são pagas diretamente às respetivas
+        plataformas e não estão incluídas nos valores
+        da WebSolutions.
+      </p>
+
+      <div class="maintenance">
+
+        <div class="fee">
+          <strong>Google Play Console</strong>
+          <p>25 USD — pagamento único.</p>
+        </div>
+
+        <div class="fee">
+          <strong>Apple Developer Program</strong>
+          <p>99 USD por ano.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">Próximos passos</div>
+
+      <h2 class="section-title">
+        Da aprovação ao lançamento.
+      </h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <span>01</span>
+          <h3>Aprovação</h3>
+          <p>
+            Confirmação da proposta e das condições
+            de desenvolvimento.
+          </p>
+        </div>
+
+        <div class="step">
+          <span>02</span>
+          <h3>Desenvolvimento</h3>
+          <p>
+            Construção da aplicação, integração da base
+            de dados e preparação dos conteúdos.
+          </p>
+        </div>
+
+        <div class="step">
+          <span>03</span>
+          <h3>Publicação</h3>
+          <p>
+            Testes finais e submissão às lojas, sujeita
+            à aprovação de cada plataforma.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDIÇÕES -->
+  <section>
+    <div class="container">
+
+      <div class="eyebrow">Condições</div>
+
+      <h2 class="section-title">
+        Informações importantes.
+      </h2>
+
+      <div class="maintenance">
+
+        <ul>
+          <li>
+            O desenvolvimento começa após a aprovação da proposta
+            e confirmação das condições de pagamento.
+          </li>
+
+          <li>
+            A cliente deverá disponibilizar o logótipo,
+            fotografias, preços e informações dos produtos.
+          </li>
+
+          <li>
+            As contas de programador das lojas deverão ficar
+            em nome da cliente.
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            A publicação depende dos processos de revisão
+            e aprovação da Google e da Apple.
+          </li>
+
+          <li>
+            Novas funcionalidades, integrações ou alterações
+            fora do âmbito acordado serão orçamentadas separadamente.
+          </li>
+
+          <li>
+            A mensalidade começa após a disponibilização do serviço,
+            conforme o acordo entre as partes.
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+
+    <div>
+      <div class="logo">
+        WEB<span>SOLUTIONS</span>
+      </div>
+
+      <p>
+        Desenvolvimento digital para negócios que querem crescer.
+      </p>
+    </div>
+
+    <div>
+      <p>Proposta preparada para SÓ ELA</p>
+
+      <a href="https://soela.vercel.app/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Consultar protótipo ↗
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const ios = document.getElementById("ios");
+  const monthly = document.getElementById("monthly");
+  const platforms = document.getElementById("platforms");
+
+  function updatePrices() {
+
+    if (ios.checked) {
+      monthly.textContent = "4.000 CVE/mês";
+      platforms.textContent = "Android + iPhone";
+    } else {
+      monthly.textContent = "2.500 CVE/mês";
+      platforms.textContent = "Android";
+    }
+
+  }
+
+  ios.addEventListener("change", updatePrices);
+</script>
+
+</body>
+</html>
